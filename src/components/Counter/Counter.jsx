@@ -1,14 +1,19 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export default function Counter() {
 
+    // Variable "d'état" que React connais 
+    // - Conserver la valeur
+    // - Dès que la valeur change → Update du visuel
     const [count, setCount] = useState(0);
 
     const handleIncr = () => {
-        setCount(count => count + 1); 
+        // Modification de valeur : Evolution
+        setCount(count => count + 1);
     };
 
     const handleReset = () => {
+        // Modification de valeur : Changement
         setCount(0)
     }
 
