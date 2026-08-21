@@ -4,6 +4,6 @@ export default function Today() {
     const today = getToday();
 
     return (
-        <p>Aujourdhui nous sommes le {today.toLocaleDateString("fr-BE", { dateStyle: "short" })}</p>
+        <p>Aujourd'hui nous sommes le {today.toLocaleDateString("fr-BE", { dateStyle: "full" })}</p>
     );
 }

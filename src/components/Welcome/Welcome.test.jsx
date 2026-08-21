@@ -1,38 +1,54 @@
 import { render, screen } from "@testing-library/react";
-// import { describe, expect, test } from "vitest";
+import { describe, expect, test } from "vitest";
 import Welcome from "./Welcome";
 
-describe('Welcome', () => {
+describe('Composant Welcome', () => {
 
-    test('displays welcome message' , () => {
-        // Arrange 
-        const firstname = 'July'
-        const lastname = 'Flora'
+    test('display welcome message', () => {
+        // Arrange
+        // - Variable
+        const firstname = 'July';
+        const lastname = 'Flora';
         const messageWelcome = 'Bienvenue July Flora !';
-        //RENDU DU COMPOSANT A TESTER
+        // - Rendu du composant a tester
         render(<Welcome firstname={firstname} lastname={lastname} />)
-        //ACT //AUCUN COMPORTEMENT POUR CE TEST 
-        screen.debug(screen.getByRole('heading'))
-        //ASSERT
+
+        // Act
+        // - Aucun comportement pour ce test
+
+        // Assert
         expect(screen.getByText(messageWelcome)).toBeInTheDocument();
     });
 
-    test('have a heading level 1 and content "Bienvenue"',()=> {
-        //ARRANGE
-        render(<Welcome firstname='Jack' lastname='Sparrow'/>);
-        //ACT
-        const title = screen.getByRole('heading',{ level : 1 });
-        //ASSET
+    /*
+    test('debug welcome message', () => {
+        // Arrange
+        render(<Welcome firstname='Della' lastname='Duck' />)
+
+        // Debug du screen
+        screen.debug(screen.getByRole('heading', { level: 1 }));
+    });
+    */
+
+    test('have a heading level 1 and content "Bienvenue"', () => {
+        // Arrange
+        render(<Welcome firstname='Jack' lastname='Sparrow' />);
+
+        // Act
+        const title = screen.getByRole('heading', { level : 1 });
+
+        // Asset
         expect(title).toHaveTextContent('Bienvenue');
     });
-
-    test('have a heading level 1 and check content by regex',() => {
-        //ARRANGE
-        render(<Welcome firstname='Jack' lastname='Sparrow'/>);
-        //ACT
-        const title = screen.getByRole('heading',{ level : 1 });
-        //ASSET
-        expect(title).toHaveTextContent(/Bienvenue [a-z]+ [a-z]+ !/i);
-    })
     
-}); 
+    test('have a heading level 1 and check content by regex', () => {
+        // Arrange
+        render(<Welcome firstname='Jack' lastname='Sparrow' />);
+
+        // Act
+        const title = screen.getByRole('heading', { level : 1 });
+
+        // Asset
+        expect(title).toHaveTextContent(/Bienvenue [a-z]+ [a-z]+ !/i);
+    });
+});

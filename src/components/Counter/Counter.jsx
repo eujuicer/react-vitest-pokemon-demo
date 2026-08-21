@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Counter({ step = 1 }) {
 
-    // Variable "d'état" que React connaît 
+    // Variable "d'état" que React connais 
     // - Conserver la valeur
     // - Dès que la valeur change → Update du visuel
     const [count, setCount] = useState(0);
