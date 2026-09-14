@@ -1,8 +1,13 @@
+/**
+ * Service d'accès à la PokéAPI (https://pokeapi.co).
+ * Isolé dans son propre fichier pour pouvoir être mocké facilement
+ * en test (voir mocks/pokemon.handlers.js) sans dépendre du réseau réel.
+ */
 export async function fetchPokemon(pokeId) {
-    // Récuperation des données depuis la WebAPI
+    // Récupération des données depuis la WebAPI
     const url = `https://pokeapi.co/api/v2/pokemon/${pokeId}`;
     const data = await fetch(url).then(res => res.json());
-    
+
     // Renvoyer les données
     return {
         name: data.name,

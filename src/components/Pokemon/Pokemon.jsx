@@ -1,4 +1,9 @@
-
+/**
+ * Pokemon — composant d'affichage "pur" (pas d'appel réseau ici).
+ * Reçoit les données déjà formatées (name, types, stats, sprites)
+ * et se contente de les afficher. Facile à tester isolément
+ * avec des props factices, sans mock d'API nécessaire.
+ */
 export default function Pokemon({ data }) {
     return (
         <div>

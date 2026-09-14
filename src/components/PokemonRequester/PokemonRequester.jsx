@@ -1,3 +1,11 @@
+/**
+ * PokemonRequester — va chercher un Pokémon en direct sur la PokéAPI
+ * (via pokemon.service.js) et affiche le résultat avec <Pokemon>.
+ * Utilise Suspense (état de chargement) et ErrorBoundary (état d'erreur)
+ * pour gérer le cycle asynchrone. En test, l'appel réseau est remplacé
+ * par un mock MSW (voir mocks/pokemon.handlers.js) pour rester fiable
+ * et rapide sans dépendre de la vraie API.
+ */
 import { ErrorBoundary } from "react-error-boundary";
 import { fetchPokemon } from "../../services/pokemon.service";
 import { Suspense, use } from "react";
