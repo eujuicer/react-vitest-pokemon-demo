@@ -1,18 +1,7 @@
-# React + Vite
+# Tests unitaires React — Vitest & React Testing Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projet d'entraînement réalisé pendant ma formation Testeur QA (Bruxelles Formation / Cefora), dédié aux tests unitaires front-end en JavaScript.
 
-Currently, two official plugins are available:
+Le projet couvre l'écriture de tests unitaires avec **Vitest** et **React Testing Library** sur une application React : composants, services, mocks et outils sont organisés et testés séparément (dossiers `components`, `services`, `mocks`, `tools` dans `src/`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
-
-Note: This will impact Vite dev & build performances.
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Objectif : démontrer une application concrète des techniques de test unitaire vues en formation (isolation des dépendances via mocks, tests de composants React, structuration d'une suite de tests) sur un projet plus avancé que mes premiers exercices.
