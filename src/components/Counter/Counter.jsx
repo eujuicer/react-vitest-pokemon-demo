@@ -1,3 +1,8 @@
+/**
+ * Counter — compteur simple avec incrément et reset.
+ * Sert à pratiquer le test d'un composant à état local (useState)
+ * avec Vitest + React Testing Library (clics, re-render, valeur affichée).
+ */
 import { useState } from "react";
 
 export default function Counter({ step = 1 }) {
