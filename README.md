@@ -1,4 +1,4 @@
-# React + Vitest — Démo Pokemon Requester
+# React + Vitest — Démo Pokémon Requester
 
 Petit site de démo réalisé pendant ma formation Testeur QA (Bruxelles Formation / Cefora), pour pratiquer les tests unitaires et d'intégration React avec **Vitest** et **React Testing Library**.
 
